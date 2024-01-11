@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<title>SITE-RECIPES</title>
+		<link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+		<meta http-equiv="refresh" content="0.5">
+	</head>
+	<body>
+
+		<section class="main"> <!--Open Main -->
+			<header>
+				<h3>SITE-RECIPES</h3>
+			</header>
+				{% block body %}{% endblock %}
+			<footer>
+				<h3>FOOTER</h3>
+			</footer>
+		</section><!-- End Main -->
+
+	</body>
+</html> 

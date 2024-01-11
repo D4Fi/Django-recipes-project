@@ -1,0 +1,29 @@
+{% extends "myapp/index_base/index_base.html" %}
+
+
+{% block body %}
+<div class="column-all">
+
+	<div class="search">
+		<input type="text">
+		<button class="btn btn-primary btn-sm">Search</button>
+		<button class="btn btn-success btn-sm" href="card-add/">add</button>
+	</div>
+
+	<div class="container-cards">
+
+		{% for card in cards %}
+		<div class="card mx-3 my-3" style="width: 18rem;">
+			<img class="card-img-top" src="{{ card.logo.url }}" alt="Card image cap">
+		  <div class="card-body">
+			<h5 class="card-title">{{ card.title }}</h5>
+			<p class="card-text">{{ card.description }}</p>
+			<a href="card/{{ card.id }}" class="btn btn-primary">more....</a><br>
+		  </div>
+		</div>
+		{% endfor %}
+
+	</div>
+
+</div> 
+{% endblock %}
